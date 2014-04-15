@@ -1,4 +1,0 @@
-yoyoexample
-===========
-
-Just for testing

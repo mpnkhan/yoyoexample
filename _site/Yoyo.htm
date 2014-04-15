@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html style="" class="js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths wf-kariprowide-i4-active wf-kariprowide-n4-active wf-proximanova-n3-active wf-proximanova-n7-active wf-active" lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Yoyo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <link rel="stylesheet" href="Yoyo_files/wpcm.css">
+<link rel="stylesheet" href="Yoyo_files/css.css">
+<link rel="stylesheet" href="Yoyo_files/ss-style.css">
+<style type="text/css">
+body { margin-top:40px; margin-bottom:50px; }
+.pace .pace-progress {
+  background: #29d;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  height: 2px;
+
+  -webkit-transition: width 1s;
+  -moz-transition: width 1s;
+  -o-transition: width 1s;
+  transition: width 1s;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.rating{unicode-bidi:bidi-override;direction:rtl;font-size:30px}.rating span.star{font-family:FontAwesome;font-weight:normal;font-style:normal;display:inline-block}.rating span.star:hover{cursor:pointer}
+.rating span.star:before{content:"\f006";padding-right:5px;color:#999}
+.rating span.star:hover:before,.rating span.star:hover~span.star:before{content:"\f005";color:#e3cf7a}
+
+/* Glyphicons */
+
+.bs-glyphicons {
+ padding-left: 0;
+ padding-bottom: 1px;
+ margin-bottom: 20px;
+ list-style: none;
+ overflow: hidden;
+}
+.bs-glyphicons li {
+float: left;
+width: 25%;
+height: 135px;
+padding: 20px;
+margin: 0 -1px -1px 0;
+font-size: 13px;
+line-height: 1.4;
+text-align: center;
+border: 1px solid #ddd;
+background: rgba(247, 247, 247, 0.80);
+}
+.bs-glyphicons .glyphicon {
+margin-top: 5px;
+margin-bottom: 10px;
+font-size: 30px;
+}
+.bs-glyphicons .glyphicon-class {
+ display: block;
+ text-align: center;
+ padding-top: inherit;
+ word-wrap: break-word; /* Help out IE10+ with class names */
+}
+.bs-glyphicons li:hover {
+ background-color: rgba(86,61,124,.1);
+}
+
+@media (min-width: 768px) {
+ .bs-glyphicons li {
+ width: 12.5%;
+ }
+}
+
+@media (max-width: 450px) {
+ .bs-glyphicons li {
+ width: 50%;
+ }
+}
+
+/* navbar */
+.navbar { 
+ box-shadow: 0 0 20px rgba(22, 22, 22, 0.20);
+ }
+ .navbar a.navbar-brand {
+ font-weight: 900;
+ position: relative;
+ font-size: 24px;
+ top: 2px;
+}
+ .navbar-default .navbar-brand{
+ color: #d8d7d7;
+ -webkit-transition: all .2s linear;
+ -moz-transition: all .2s linear;
+ transition: all .2s linear;
+}
+
+
+a.btn.btn-link.navbar-btn {
+ position: relative;
+ top: 2px;
+ color: #d8d7d7;
+ -webkit-transition: all .2s linear;
+ -moz-transition: all .2s linear;
+ transition: all .2s linear;
+}
+
+
+
+.content-info {
+ text-align: center;
+ color: silver;
+ position: fixed;
+ bottom: 0;
+ min-width: 100%;
+ max-height: 30px;
+ background-color: rgba(255, 255, 255, 1.0)!important;
+ padding: 0!important;
+}
+
+.modal {
+ position: fixed;
+ top: 40px;
+}
+
+ul, ol {
+list-style-type: none;
+}
+
+
+
+/* Gravity Forms */
+#gform_fields_3 {
+	padding: 0;
+	margin: 0;
+}
+
+.gfield_label {
+	font-size: 18px;
+	font-weight: lighter
+}
+
+.gfield_required {
+	padding-left: 5px;
+}
+#input_3_1 label, #input_3_4 label, #input_3_2_1_container label, #input_3_2_2_container label {
+	margin-bottom: 5px;
+	margin-top: 0;
+	position: relative;
+	bottom: 8px;
+	left: 2px;
+	color: gray;
+	font-weight: lighter;
+}
+
+#field_3_1 {
+	margin: 0;
+}
+
+#input_3_1_3,
+#input_3_1_6,
+#input_3_4_1,
+#input_3_4_2,
+#input_3_4_3,
+#input_3_4_4,
+#input_3_4_5,
+#input_3_4_6,
+#input_3_11,
+#input_3_2,
+#input_3_2_2 {
+	width: 50%;
+	margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+		#input_3_1_3,
+		#input_3_1_6,
+		#input_3_4_1,
+		#input_3_4_2,
+		#input_3_4_3,
+		#input_3_4_4,
+		#input_3_4_5,
+		#input_3_4_6,
+		#input_3_11,
+		#input_3_2,
+		#input_3_2_2,
+		#input_3_3 {
+	width: 100%;
+	margin-bottom: 10px;
+	}
+}
+
+ 
+
+/* App Offline Alerts */
+
+/* line 4, ../sass/_offline-theme-base.sass */
+.offline-ui, .offline-ui *, .offline-ui:before, .offline-ui:after, .offline-ui *:before, .offline-ui *:after {
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ box-sizing: border-box;
+}
+
+/* line 7, ../sass/_offline-theme-base.sass */
+.offline-ui {
+ display: none;
+ position: fixed;
+ background: white;
+ z-index: 10000;
+ margin: auto;
+ top: 0;
+ left: 0;
+ right: 0;
+}
+/* line 17, ../sass/_offline-theme-base.sass */
+.offline-ui .offline-ui-content:before {
+ display: inline;
+}
+/* line 20, ../sass/_offline-theme-base.sass */
+.offline-ui .offline-ui-retry {
+ -webkit-user-select: none;
+ -moz-user-select: none;
+ user-select: none;
+ display: none;
+}
+/* line 24, ../sass/_offline-theme-base.sass */
+.offline-ui .offline-ui-retry:before {
+ display: inline;
+ content: "Reconnect";
+}
+/* line 30, ../sass/_offline-theme-base.sass */
+.offline-ui.offline-ui-up .offline-ui-content:before {
+ content: "Your computer is connected to the internet. ";
+}
+@media (max-width: 1024px) {
+ /* line 30, ../sass/_offline-theme-base.sass */
+ .offline-ui.offline-ui-up .offline-ui-content:before {
+ content: "Your device is connected to the internet. ";
+ }
+}
+@media (max-width: 568px) {
+ /* line 30, ../sass/_offline-theme-base.sass */
+ .offline-ui.offline-ui-up .offline-ui-content:before {
+ content: "Your device is connected. ";
+ }
+}
+/* line 39, ../sass/_offline-theme-base.sass */
+.offline-ui.offline-ui-up.offline-ui-up-5s {
+ display: block;
+}
+/* line 42, ../sass/_offline-theme-base.sass */
+.offline-ui.offline-ui-down {
+ display: block;
+}
+/* line 47, ../sass/_offline-theme-base.sass */
+.offline-ui.offline-ui-down.offline-ui-connecting .offline-ui-content:before, .offline-ui.offline-ui-down.offline-ui-connecting-2s .offline-ui-content:before {
+ content: "Attempting to reconnect... ";
+}
+/* line 52, ../sass/_offline-theme-base.sass */
+.offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-retry {
+ display: block;
+}
+/* line 55, ../sass/_offline-theme-base.sass */
+.offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content:before {
+ content: "Attempting to reconnect in " attr(data-retry-in) "... ";
+}
+@media (max-width: 568px) {
+ /* line 55, ../sass/_offline-theme-base.sass */
+ .offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content:before {
+ content: "Connecting in " attr(data-retry-in-abbr) "... ";
+ }
+}
+/* line 63, ../sass/_offline-theme-base.sass */
+.offline-ui.offline-ui-down.offline-ui-reconnect-failed-2s.offline-ui-waiting .offline-ui-retry {
+ display: none;
+}
+/* line 66, ../sass/_offline-theme-base.sass */
+.offline-ui.offline-ui-down.offline-ui-reconnect-failed-2s .offline-ui-content:before {
+ content: "Connection attempt failed. ";
+}
+/* line 71, ../sass/_offline-theme-base.sass */
+.offline-ui.offline-ui-down.offline-ui-down-5s .offline-ui-content:before {
+ content: "Your computer lost its internet connection. ";
+}
+@media (max-width: 1024px) {
+ /* line 71, ../sass/_offline-theme-base.sass */
+ .offline-ui.offline-ui-down.offline-ui-down-5s .offline-ui-content:before {
+ content: "Your device lost its internet connection. ";
+ }
+}
+@media (max-width: 568px) {
+ /* line 71, ../sass/_offline-theme-base.sass */
+ .offline-ui.offline-ui-down.offline-ui-down-5s .offline-ui-content:before {
+ content: "Your device isn't connected. ";
+ }
+}
+/* line 80, ../sass/_offline-theme-base.sass */
+.offline-ui.offline-ui-down.offline-ui-down-5s.offline-ui-waiting .offline-ui-retry {
+ display: none;
+}
+
+@-webkit-keyframes offline-dropin {
+ /* line 40, ../sass/_keyframes.sass */
+ 0% {
+ transform: translateY(0);
+ -webkit-transform: translateY(0);
+ -moz-transform: translateY(0);
+ -ms-transform: translateY(0);
+ -o-transform: translateY(0);
+ opacity: 0;
+ }
+
+ /* line 43, ../sass/_keyframes.sass */
+ 1% {
+ transform: translateY(-800px);
+ -webkit-transform: translateY(-800px);
+ -moz-transform: translateY(-800px);
+ -ms-transform: translateY(-800px);
+ -o-transform: translateY(-800px);
+ opacity: 0;
+ }
+
+ /* line 48, ../sass/_keyframes.sass */
+ 2% {
+ transform: translateY(-800px);
+ -webkit-transform: translateY(-800px);
+ -moz-transform: translateY(-800px);
+ -ms-transform: translateY(-800px);
+ -o-transform: translateY(-800px);
+ opacity: 1;
+ }
+
+ /* line 51, ../sass/_keyframes.sass */
+ 100% {
+ transform: translateY(0);
+ -webkit-transform: translateY(0);
+ -moz-transform: translateY(0);
+ -ms-transform: translateY(0);
+ -o-transform: translateY(0);
+ opacity: 1;
+ }
+}
+
+@-moz-keyframes offline-dropin {
+ /* line 40, ../sass/_keyframes.sass */
+ 0% {
+ transform: translateY(0);
+ -webkit-transform: translateY(0);
+ -moz-transform: translateY(0);
+ -ms-transform: translateY(0);
+ -o-transform: translateY(0);
+ opacity: 0;
+ }
+
+ /* line 43, ../sass/_keyframes.sass */
+ 1% {
+ transform: translateY(-800px);
+ -webkit-transform: translateY(-800px);
+ -moz-transform: translateY(-800px);
+ -ms-transform: translateY(-800px);
+ -o-transform: translateY(-800px);
+ opacity: 0;
+ }
+
+ /* line 48, ../sass/_keyframes.sass */
+ 2% {
+ transform: translateY(-800px);
+ -webkit-transform: translateY(-800px);
+ -moz-transform: translateY(-800px);
+ -ms-transform: translateY(-800px);
+ -o-transform: translateY(-800px);
+ opacity: 1;
+ }
+
+ /* line 51, ../sass/_keyframes.sass */
+ 100% {
+ transform: translateY(0);
+ -webkit-transform: translateY(0);
+ -moz-transform: translateY(0);
+ -ms-transform: translateY(0);
+ -o-transform: translateY(0);
+ opacity: 1;
+ }
+}
+
+@-ms-keyframes offline-dropin {
+ /* line 40, ../sass/_keyframes.sass */
+ 0% {
+ transform: translateY(0);
+ -webkit-transform: translateY(0);
+ -moz-transform: translateY(0);
+ -ms-transform: translateY(0);
+ -o-transform: translateY(0);
+ opacity: 0;
+ }
+
+ /* line 43, ../sass/_keyframes.sass */
+ 1% {
+ transform: translateY(-800px);
+ -webkit-transform: translateY(-800px);
+ -moz-transform: translateY(-800px);
+ -ms-transform: translateY(-800px);
+ -o-transform: translateY(-800px);
+ opacity: 0;
+ }
+
+ /* line 48, ../sass/_keyframes.sass */
+ 2% {
+ transform: translateY(-800px);
+ -webkit-transform: translateY(-800px);
+ -moz-transform: translateY(-800px);
+ -ms-transform: translateY(-800px);
+ -o-transform: translateY(-800px);
+ opacity: 1;
+ }
+
+ /* line 51, ../sass/_keyframes.sass */
+ 100% {
+ transform: translateY(0);
+ -webkit-transform: translateY(0);
+ -moz-transform: translateY(0);
+ -ms-transform: translateY(0);
+ -o-transform: translateY(0);
+ opacity: 1;
+ }
+}
+
+@-o-keyframes offline-dropin {
+ /* line 40, ../sass/_keyframes.sass */
+ 0% {
+ transform: translateY(0);
+ -webkit-transform: translateY(0);
+ -moz-transform: translateY(0);
+ -ms-transform: translateY(0);
+ -o-transform: translateY(0);
+ opacity: 0;
+ }
+
+ /* line 43, ../sass/_keyframes.sass */
+ 1% {
+ transform: translateY(-800px);
+ -webkit-transform: translateY(-800px);
+ -moz-transform: translateY(-800px);
+ -ms-transform: translateY(-800px);
+ -o-transform: translateY(-800px);
+ opacity: 0;
+ }
+
+ /* line 48, ../sass/_keyframes.sass */
+ 2% {
+ transform: translateY(-800px);
+ -webkit-transform: translateY(-800px);
+ -moz-transform: translateY(-800px);
+ -ms-transform: translateY(-800px);
+ -o-transform: translateY(-800px);
+ opacity: 1;
+ }
+
+ /* line 51, ../sass/_keyframes.sass */
+ 100% {
+ transform: translateY(0);
+ -webkit-transform: translateY(0);
+ -moz-transform: translateY(0);
+ -ms-transform: translateY(0);
+ -o-transform: translateY(0);
+ opacity: 1;
+ }
+}
+
+@keyframes offline-dropin {
+ /* line 40, ../sass/_keyframes.sass */
+ 0% {
+ transform: translateY(0);
+ -webkit-transform: translateY(0);
+ -moz-transform: translateY(0);
+ -ms-transform: translateY(0);
+ -o-transform: translateY(0);
+ opacity: 0;
+ }
+
+ /* line 43, ../sass/_keyframes.sass */
+ 1% {
+ transform: translateY(-800px);
+ -webkit-transform: translateY(-800px);
+ -moz-transform: translateY(-800px);
+ -ms-transform: translateY(-800px);
+ -o-transform: translateY(-800px);
+ opacity: 0;
+ }
+
+ /* line 48, ../sass/_keyframes.sass */
+ 2% {
+ transform: translateY(-800px);
+ -webkit-transform: translateY(-800px);
+ -moz-transform: translateY(-800px);
+ -ms-transform: translateY(-800px);
+ -o-transform: translateY(-800px);
+ opacity: 1;
+ }
+
+ /* line 51, ../sass/_keyframes.sass */
+ 100% {
+ transform: translateY(0);
+ -webkit-transform: translateY(0);
+ -moz-transform: translateY(0);
+ -ms-transform: translateY(0);
+ -o-transform: translateY(0);
+ opacity: 1;
+ }
+}
+
+@-webkit-keyframes offline-dropout {
+ /* line 57, ../sass/_keyframes.sass */
+ 0% {
+ transform: translateY(0);
+ -webkit-transform: translateY(0);
+ -moz-transform: translateY(0);
+ -ms-transform: translateY(0);
+ -o-transform: translateY(0);
+ }
+
+ /* line 59, ../sass/_keyframes.sass */
+ 100% {
+ transform: translateY(-800px);
+ -webkit-transform: translateY(-800px);
+ -moz-transform: translateY(-800px);
+ -ms-transform: translateY(-800px);
+ -o-transform: translateY(-800px);
+ }
+}
+
+@-moz-keyframes offline-dropout {
+ /* line 57, ../sass/_keyframes.sass */
+ 0% {
+ transform: translateY(0);
+ -webkit-transform: translateY(0);
+ -moz-transform: translateY(0);
+ -ms-transform: translateY(0);
+ -o-transform: translateY(0);
+ }
+
+ /* line 59, ../sass/_keyframes.sass */
+ 100% {
+ transform: translateY(-800px);
+ -webkit-transform: translateY(-800px);
+ -moz-transform: translateY(-800px);
+ -ms-transform: translateY(-800px);
+ -o-transform: translateY(-800px);
+ }
+}
+
+@-ms-keyframes offline-dropout {
+ /* line 57, ../sass/_keyframes.sass */
+ 0% {
+ transform: translateY(0);
+ -webkit-transform: translateY(0);
+ -moz-transform: translateY(0);
+ -ms-transform: translateY(0);
+ -o-transform: translateY(0);
+ }
+
+ /* line 59, ../sass/_keyframes.sass */
+ 100% {
+ transform: translateY(-800px);
+ -webkit-transform: translateY(-800px);
+ -moz-transform: translateY(-800px);
+ -ms-transform: translateY(-800px);
+ -o-transform: translateY(-800px);
+ }
+}
+
+@-o-keyframes offline-dropout {
+ /* line 57, ../sass/_keyframes.sass */
+ 0% {
+ transform: translateY(0);
+ -webkit-transform: translateY(0);
+ -moz-transform: translateY(0);
+ -ms-transform: translateY(0);
+ -o-transform: translateY(0);
+ }
+
+ /* line 59, ../sass/_keyframes.sass */
+ 100% {
+ transform: translateY(-800px);
+ -webkit-transform: translateY(-800px);
+ -moz-transform: translateY(-800px);
+ -ms-transform: translateY(-800px);
+ -o-transform: translateY(-800px);
+ }
+}
+
+@keyframes offline-dropout {
+ /* line 57, ../sass/_keyframes.sass */
+ 0% {
+ transform: translateY(0);
+ -webkit-transform: translateY(0);
+ -moz-transform: translateY(0);
+ -ms-transform: translateY(0);
+ -o-transform: translateY(0);
+ }
+
+ /* line 59, ../sass/_keyframes.sass */
+ 100% {
+ transform: translateY(-800px);
+ -webkit-transform: translateY(-800px);
+ -moz-transform: translateY(-800px);
+ -ms-transform: translateY(-800px);
+ -o-transform: translateY(-800px);
+ }
+}
+
+@-webkit-keyframes offline-rotation {
+ /* line 64, ../sass/_keyframes.sass */
+ 0% {
+ transform: rotate(0deg);
+ -webkit-transform: rotate(0deg);
+ -moz-transform: rotate(0deg);
+ -ms-transform: rotate(0deg);
+ -o-transform: rotate(0deg);
+ }
+
+ /* line 66, ../sass/_keyframes.sass */
+ 100% {
+ transform: rotate(359deg);
+ -webkit-transform: rotate(359deg);
+ -moz-transform: rotate(359deg);
+ -ms-transform: rotate(359deg);
+ -o-transform: rotate(359deg);
+ }
+}
+
+@-moz-keyframes offline-rotation {
+ /* line 64, ../sass/_keyframes.sass */
+ 0% {
+ transform: rotate(0deg);
+ -webkit-transform: rotate(0deg);
+ -moz-transform: rotate(0deg);
+ -ms-transform: rotate(0deg);
+ -o-transform: rotate(0deg);
+ }
+
+ /* line 66, ../sass/_keyframes.sass */
+ 100% {
+ transform: rotate(359deg);
+ -webkit-transform: rotate(359deg);
+ -moz-transform: rotate(359deg);
+ -ms-transform: rotate(359deg);
+ -o-transform: rotate(359deg);
+ }
+}
+
+@-ms-keyframes offline-rotation {
+ /* line 64, ../sass/_keyframes.sass */
+ 0% {
+ transform: rotate(0deg);
+ -webkit-transform: rotate(0deg);
+ -moz-transform: rotate(0deg);
+ -ms-transform: rotate(0deg);
+ -o-transform: rotate(0deg);
+ }
+
+ /* line 66, ../sass/_keyframes.sass */
+ 100% {
+ transform: rotate(359deg);
+ -webkit-transform: rotate(359deg);
+ -moz-transform: rotate(359deg);
+ -ms-transform: rotate(359deg);
+ -o-transform: rotate(359deg);
+ }
+}
+
+@-o-keyframes offline-rotation {
+ /* line 64, ../sass/_keyframes.sass */
+ 0% {
+ transform: rotate(0deg);
+ -webkit-transform: rotate(0deg);
+ -moz-transform: rotate(0deg);
+ -ms-transform: rotate(0deg);
+ -o-transform: rotate(0deg);
+ }
+
+ /* line 66, ../sass/_keyframes.sass */
+ 100% {
+ transform: rotate(359deg);
+ -webkit-transform: rotate(359deg);
+ -moz-transform: rotate(359deg);
+ -ms-transform: rotate(359deg);
+ -o-transform: rotate(359deg);
+ }
+}
+
+@keyframes offline-rotation {
+ /* line 64, ../sass/_keyframes.sass */
+ 0% {
+ transform: rotate(0deg);
+ -webkit-transform: rotate(0deg);
+ -moz-transform: rotate(0deg);
+ -ms-transform: rotate(0deg);
+ -o-transform: rotate(0deg);
+ }
+
+ /* line 66, ../sass/_keyframes.sass */
+ 100% {
+ transform: rotate(359deg);
+ -webkit-transform: rotate(359deg);
+ -moz-transform: rotate(359deg);
+ -ms-transform: rotate(359deg);
+ -o-transform: rotate(359deg);
+ }
+}
+
+/* line 21, ../sass/offline-theme-slide.sass */
+.offline-ui {
+ -webkit-border-radius: 0 0 4px 4px;
+ -moz-border-radius: 0 0 4px 4px;
+ -ms-border-radius: 0 0 4px 4px;
+ -o-border-radius: 0 0 4px 4px;
+ border-radius: 0 0 4px 4px;
+ font-family: "Helvetica Neue", sans-serif;
+ white-space: nowrap;
+ padding: 1em;
+ width: 34em;
+ max-width: 100%;
+}
+@media (max-width: 34em) {
+ /* line 21, ../sass/offline-theme-slide.sass */
+ .offline-ui {
+ -webkit-border-radius: 0;
+ -moz-border-radius: 0;
+ -ms-border-radius: 0;
+ -o-border-radius: 0;
+ border-radius: 0;
+ }
+}
+/* line 32, ../sass/offline-theme-slide.sass */
+.offline-ui .offline-ui-retry {
+ position: absolute;
+ right: 3em;
+ top: 0;
+ bottom: 0;
+ background: rgba(0, 0, 0, 0.1);
+ text-decoration: none;
+ color: inherit;
+ line-height: 3em;
+ padding: 0 1em;
+}
+/* line 43, ../sass/offline-theme-slide.sass */
+.offline-ui.offline-ui-up {
+ -webkit-animation: offline-dropout forwards 0.5s 2s;
+ -moz-animation: offline-dropout forwards 0.5s 2s;
+ -ms-animation: offline-dropout forwards 0.5s 2s;
+ -o-animation: offline-dropout forwards 0.5s 2s;
+ animation: offline-dropout forwards 0.5s 2s;
+ -webkit-backface-visibility: hidden;
+ background: #d6e9c6;
+ color: #468847;
+}
+/* line 48, ../sass/offline-theme-slide.sass */
+.offline-ui.offline-ui-down {
+ -webkit-animation: offline-dropin 0.5s;
+ -moz-animation: offline-dropin 0.5s;
+ -ms-animation: offline-dropin 0.5s;
+ -o-animation: offline-dropin 0.5s;
+ animation: offline-dropin 0.5s;
+ -webkit-backface-visibility: hidden;
+ background: #ec8787;
+ color: #551313;
+}
+/* line 53, ../sass/offline-theme-slide.sass */
+.offline-ui.offline-ui-down.offline-ui-connecting, .offline-ui.offline-ui-down.offline-ui-waiting {
+ background: #f8ecad;
+ color: #7c6d1f;
+ padding-right: 3em;
+}
+/* line 58, ../sass/offline-theme-slide.sass */
+.offline-ui.offline-ui-down.offline-ui-connecting:after, .offline-ui.offline-ui-down.offline-ui-waiting:after {
+ -webkit-animation: offline-rotation 0.7s linear infinite;
+ -moz-animation: offline-rotation 0.7s linear infinite;
+ -ms-animation: offline-rotation 0.7s linear infinite;
+ -o-animation: offline-rotation 0.7s linear infinite;
+ animation: offline-rotation 0.7s linear infinite;
+ -webkit-backface-visibility: hidden;
+ -webkit-border-radius: 50%;
+ -moz-border-radius: 50%;
+ -ms-border-radius: 50%;
+ -o-border-radius: 50%;
+ border-radius: 50%;
+ content: " ";
+ display: block;
+ position: absolute;
+ right: 1em;
+ top: 0;
+ bottom: 0;
+ margin: auto;
+ height: 1em;
+ width: 1em;
+ border: 2px solid rgba(0, 0, 0, 0);
+ border-top-color: #7c6d1f;
+ border-left-color: #7c6d1f;
+ opacity: 0.7;
+}
+/* line 75, ../sass/offline-theme-slide.sass */
+.offline-ui.offline-ui-down.offline-ui-waiting {
+ padding-right: 11em;
+}
+
+
+
+/* line 2, ../sass/_sortable.sass */
+table[data-sortable] {
+ border-collapse: collapse;
+ border-spacing: 0;
+}
+/* line 6, ../sass/_sortable.sass */
+table[data-sortable] th {
+ vertical-align: bottom;
+ font-weight: bold;
+}
+/* line 10, ../sass/_sortable.sass */
+table[data-sortable] th, table[data-sortable] td {
+ text-align: left;
+ padding: 10px;
+}
+/* line 14, ../sass/_sortable.sass */
+table[data-sortable] th:not([data-sortable="false"]) {
+ -webkit-user-select: none;
+ -moz-user-select: none;
+ -ms-user-select: none;
+ -o-user-select: none;
+ user-select: none;
+ -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+ -webkit-touch-callout: none;
+ cursor: pointer;
+}
+/* line 26, ../sass/_sortable.sass */
+table[data-sortable] th:after {
+ content: "";
+ visibility: hidden;
+ display: inline-block;
+ vertical-align: inherit;
+ height: 0;
+ width: 0;
+ border-width: 5px;
+ border-style: solid;
+ border-color: transparent;
+ margin-right: 1px;
+ margin-left: 10px;
+ float: right;
+}
+/* line 40, ../sass/_sortable.sass */
+table[data-sortable] th[data-sorted="true"]:after {
+ visibility: visible;
+}
+/* line 43, ../sass/_sortable.sass */
+table[data-sortable] th[data-sorted-direction="descending"]:after {
+ border-top-color: inherit;
+ margin-top: 8px;
+}
+/* line 47, ../sass/_sortable.sass */
+table[data-sortable] th[data-sorted-direction="ascending"]:after {
+ border-bottom-color: inherit;
+ margin-top: 3px;
+}
+
+/* line 5, ../sass/sortable-theme-bootstrap.sass */
+table[data-sortable].sortable-theme-bootstrap {
+ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+ font-size: 14px;
+ line-height: 20px;
+ color: #333333;
+ background: white;
+}
+/* line 12, ../sass/sortable-theme-bootstrap.sass */
+table[data-sortable].sortable-theme-bootstrap thead th {
+ border-bottom: 2px solid #e0e0e0;
+}
+/* line 15, ../sass/sortable-theme-bootstrap.sass */
+table[data-sortable].sortable-theme-bootstrap tbody td {
+ border-top: 1px solid #e0e0e0;
+}
+/* line 18, ../sass/sortable-theme-bootstrap.sass */
+table[data-sortable].sortable-theme-bootstrap th[data-sorted="true"] {
+ color: #3a87ad;
+ background: #d9edf7;
+ border-bottom-color: #bce8f1;
+}
+/* line 23, ../sass/sortable-theme-bootstrap.sass */
+table[data-sortable].sortable-theme-bootstrap th[data-sorted="true"][data-sorted-direction="descending"]:after {
+ border-top-color: #3a87ad;
+}
+/* line 26, ../sass/sortable-theme-bootstrap.sass */
+table[data-sortable].sortable-theme-bootstrap th[data-sorted="true"][data-sorted-direction="ascending"]:after {
+ border-bottom-color: #3a87ad;
+}
+/* line 31, ../sass/sortable-theme-bootstrap.sass */
+table[data-sortable].sortable-theme-bootstrap.sortable-theme-bootstrap-striped tbody > tr:nth-child(odd) > td {
+ background-color: #f9f9f9;
+}
+
+/* Font Awesome ratings */
+.rating{unicode-bidi:bidi-override;direction:rtl;font-size:30px}.rating span.star{font-family:FontAwesome;font-weight:normal;font-style:normal;display:inline-block}.rating span.star:hover{cursor:pointer}
+.rating span.star:before{content:"\f006";padding-right:5px;color:#999}
+.rating span.star:hover:before,.rating span.star:hover~span.star:before{content:"\f005";color:#e3cf7a}
+
+
+/* Tweaks */
+#footer-copyright {
+	font-size: 13px;
+}
+
+.btn:focus {
+ outline: none;
+}
+footer.content-info {color:#8C8989;background:#282a2b;padding: 18px 10px 18px;}footer div.container { margin-top:0px; }#copyright-bar { line-height: 30px; }#footer_social_bar { line-height: 30px; font-size: 16px; text-align: right; }#footer_social_bar a { margin-left: 9px; padding: 3px; color:#8C8989; }#footer_social_bar a:hover, #footer_social_bar a:active { color:#428bca !important; text-decoration:none; }
+.jumbotron {background-attachment: fixed;text-align: center;margin-bottom: 0px;}
+.navbar, .navbar-default {background: transparent; background: rgba(248,248,248, 0.9); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#9f8f8f8,endColorstr=#9f8f8f8); ;}.navbar-static-top { margin-top:px !important; margin-bottom:px !important; }
+</style>
+<link rel="stylesheet" href="Yoyo_files/bootstrap-accessibility.css">
+
+<script>var jquery_placeholder_url = 'http://yoyo.io/wp-content/plugins/gravity-forms-placeholders/jquery.placeholder-1.0.1.js';</script><script type="text/javascript" src="Yoyo_files/pace.js"></script>
+<script type="text/javascript" src="Yoyo_files/jquery_003.js"></script>
+<script>window.jQuery || document.write('<script src="http://yoyo.io/wp-content/themes/shoestrap-3/assets/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+<script type="text/javascript" src="Yoyo_files/jquery_002.js"></script>
+<script type="text/javascript" src="Yoyo_files/modernizr-2.js"></script>
+<script type="text/javascript" src="Yoyo_files/gf.js"></script>
+<script type="text/javascript" src="Yoyo_files/cps6wwz.js"></script><style type="text/css">.h1,.h2,.jumbotron h1,.navbar a.navbar-brand,.navbar-brand,.navbar-brand-text,h1,h2{font-family:"kari-pro-wide",sans-serif;}#buddypress div.item-list-tabs ul li a,#buddypress div.item-list-tabs ul li.selected a,#liveblog-container .button,.btn,.jumbotron p,.liveblog-actions legend ul .active a,.liveblog-actions legend ul a,.liveblog-entry,.liveblog-entry .liveblog-entry-text,.liveblog-entry-text,.liveblog-form-entry,.liveblog-form-entry-submit,.navbar li,.navbar li > a,body,button,h3,h4,h5,h6,input,label,label.gfield_label,select,textarea{font-family:"proxima-nova",sans-serif;}</style><link href="Yoyo_files/d.css" rel="stylesheet"><script type="text/javascript">try{Typekit.load();}catch(e){}</script></head><body class="home page   top-navbar  pace-done"><div class="pace  pace-inactive"><div data-progress="99" data-progress-text="100%" style="width: 100%;" class="pace-progress">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div><a href="https://plus.google.com/105770173427806272608" rel="publisher"></a>	<style type="text/css">
+		a.bbp-author-avatar { display: inline-block; }
+		.bbp-reply-author img,
+		.bbp-topic-started-by-avatar-avatar img,
+		.bbp-topic-freshness-author img  { border-radius: 50%; }
+		.bbp-topic-freshness-author a { display: inline-block; }
+		.bbp-topic-freshness-author a.bbp-author-name { display: none; }
+		.bbp-topic-freshness-author p.bbp-topic-meta { display: inline-block; }
+	</style>
+	<link rel="shortcut icon" href="http://yoyo.io/wp-content/uploads/2013/10/favicon-32x32.png" type="image/x-icon">    <!-- For iPhone --><link rel="apple-touch-icon-precomposed" href="http://yoyo.io/wp-content/uploads/2013/10/yoyo-57x57.png">
+    <!-- For iPhone 4 Retina display --><link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://yoyo.io/wp-content/uploads/2013/10/yoyo-57x57@2x.png">
+    <!-- For iPad --><link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://yoyo.io/wp-content/uploads/2013/10/yoyo-72x72.png">
+    <!-- For iPad Retina display --><link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://yoyo.io/wp-content/uploads/2013/10/yoyo-72x72@2x.png">
+    	<link rel="canonical" href="http://yoyo.io/">
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+  	<script src="http://yoyo.io/wp-content/themes/shoestrap-3/assets/js/vendor/html5shiv.js"></script>
+  	<script src="http://yoyo.io/wp-content/themes/shoestrap-3/assets/js/vendor/respond.min.js"></script>
+	<![endif]-->
+
+  <link rel="alternate" type="application/rss+xml" title="Yoyo Feed" href="http://yoyo.io/feed/">
+
+
+
+  <!--[if lt IE 8]>
+    <div class="alert alert-warning">
+      You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.    </div>
+  <![endif]-->
+
+  
+  
+                      <header class="banner navbar navbar-default topnavbar navbar-fixed-top default" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-main, .nav-extras">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand text" href="http://yoyo.io/">Yoyo</a>    </div>
+    <div class="nav-extras">
+          </div>
+    <nav class="nav-main navbar-collapse collapse" role="navigation">
+      <ul id="menu-primary-navigation" class="nav pull-right navbar-nav"><li class="dropdown menu-docs"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://yoyo.io/docs/">Docs <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-css"><a href="http://yoyo.io/docs/css/">CSS</a></li>
+	<li class="menu-javascript"><a href="http://yoyo.io/docs/javascript/">Javascript</a></li>
+	<li class="menu-components"><a href="http://yoyo.io/docs/components/">Components</a></li>
+	<li class="menu-font-awesome"><a href="http://yoyo.io/docs/font-awesome/">Font Awesome</a></li>
+	<li class="menu-elusive-icons"><a href="http://yoyo.io/docs/elusive-icons/">Elusive Icons</a></li>
+</ul>
+</li>
+<li class="dropdown menu-support"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://yoyo.io/submit-ticket/">Support <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-submit-ticket"><a href="http://yoyo.io/submit-ticket/">Submit Ticket</a></li>
+	<li class="menu-terms"><a href="http://yoyo.io/terms/">Terms</a></li>
+	<li class="menu-privacy"><a href="http://yoyo.io/privacy/">Privacy</a></li>
+	<li class="menu-returns"><a href="http://yoyo.io/returns/">Returns</a></li>
+</ul>
+</li>
+<li class="menu-contact"><a href="http://yoyo.io/contact/">Contact</a></li>
+</ul><div id="navbar_social_bar"><a class="btn btn-link navbar-btn" href="https://plus.google.com/105770173427806272608" target="_blank" title="googleplus"><i class="icon el-icon-googleplus"></i> </a></div>    </nav>
+      </div>
+</header>            
+  
+  
+  
+      <div class="before-main-wrapper">
+      			<div id="megaDrop" class="top-megamenu container">
+	
+				
+		<div class="row">
+					
+			
+			
+					</div>
+	</div>
+		
+	<div class="clearfix"></div>
+
+	    </div>
+  
+  
+        
+  
+  <div class="wrap main-section container" role="document">
+
+    
+    <div class="content">
+      <div class="row bg">
+
+        
+        
+        <main class="main col-sm-12" role="main">
+                      <div class="clearfix"></div>
+              </main><!-- /.main -->
+
+        
+        
+        
+              </div>
+    </div><!-- /.content -->
+      </div><!-- /.wrap -->
+  
+  
+        <footer class="content-info" role="contentinfo">
+  <div class="container">    <div class="row">
+      </div>      
+	<div id="footer-copyright">
+		<article class="container">
+			<div id="copyright-bar" class="col-lg-12">© 2014 Yoyo</div>
+						<div class="clearfix"></div>
+		</article>
+	</div>
+	    </div>
+  
+</footer>
+  
+  	
+	
+  
+  
+ <script type="text/javascript" src="Yoyo_files/bootstrap.js"></script>
+<script type="text/javascript" src="Yoyo_files/main.js"></script>
+<script type="text/javascript" src="Yoyo_files/jquery.js"></script>
+<script type="text/javascript" src="Yoyo_files/retina.js"></script>
+<script type="text/javascript" src="Yoyo_files/jquery_004.js"></script>
+<script id="core.advanced-user-js">                // tooltip and popover
+jQuery(function ($) {
+ $('[data-toggle="tooltip"]').tooltip({});
+ $('[data-toggle="popover"]').popover({trigger: 'click'});
+});
+
+// Gravityforms
+(function ($) {
+ var gform = $(document).find('.gform_wrapper').attr('class');
+ if(typeof gform !== 'undefined' && gform !== 'false'){
+ $(document).on('gform_post_render',function(){
+ var form = $('.gform_wrapper');
+ var required = $('.gfield_contains_required');
+ var controlGroup = $('.gfield');
+ required.each(function(){
+ $(this).find('input, textarea, select').not('input[type="checkbox"], input[type="radio"]').attr('required', 'true');
+ });
+ $('.gform_fields').each(function(){
+ $(this).addClass('row');
+ });
+ controlGroup.each(function(){
+ $(this).addClass('form-group').find('input, textarea, select').not('input[type="checkbox"], input[type="radio"]').after('').addClass('form-control');
+ });
+ form.find("input[type='submit'], input[type='button']").addClass('btn btn-primary').end().find('.gfield_error').removeClass('gfield_error').addClass('has-error');
+ $('.gfield_checkbox, .gfield_radio').find('input[type="checkbox"], input[type="radio"]').each(function(){
+ var sib = $(this).siblings('label');
+ $(this).prependTo(sib);
+ }).end().each(function(){
+ $(this).after('');
+ if($(this).is('.gfield_checkbox')){
+ $(this).addClass('checkbox');
+ } else {
+ $(this).addClass('radio');
+ }
+ });
+ $('.validation_message').each(function(){
+ var sib = $(this).prev().find('.help-block');
+ $(this).appendTo(sib);
+ });
+ $('.validation_error').addClass('alert alert-danger');
+ $('.gf_progressbar').addClass('progress progress-striped active').children('.gf_progressbar_percentage').addClass('progress-bar progress-bar-success');
+ });
+ } else {
+ console.log('no forms were found');
+ return false;
+ }
+})(jQuery);            </script>
+
+<script type="text/javascript" src="Yoyo_files/bootstrap-accessibility.js"></script>
+</body></html>
